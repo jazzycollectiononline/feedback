@@ -1,0 +1,257 @@
+/* =========================================================
+   JAZZY COLLECTION — Feedback Page
+   Minimal · Professional · Compact · White & Forest Dark Green
+   ========================================================= */
+
+:root {
+  --green: #1b4d3e;      /* forest dark green */
+  --green-dark: #12372b;
+  --green-light: #e3efe9;
+  --gold: #e0a82e;       /* golden rating stars */
+  --white: #ffffff;
+  --text: #2b2b2b;
+  --muted: #7a7a7a;
+  --border: #ececec;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  --radius: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  background: #fafafa;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Logo (standalone) ===== */
+.logo-wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 36px;
+}
+
+.brand-logo {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 0 0 18px;
+  margin-top: -70px;
+}
+
+.hero h2 {
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.hero h2 span { color: var(--green); }
+
+.hero p {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 0.92rem;
+}
+
+/* ===== Card ===== */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.form-card {
+  max-width: 520px;
+  margin: 0 auto 30px;
+}
+
+.form-card h3,
+.reviews-section h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--green);
+}
+
+/* ===== Form ===== */
+.field { margin-bottom: 12px; }
+
+.field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 9px 12px;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: #f6f6f7;
+  transition: background 0.2s, box-shadow 0.2s;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  background: var(--white);
+  box-shadow: 0 0 0 3px var(--green-light);
+}
+
+/* ===== Star Rating ===== */
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.star {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #d9d9d9;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.star:hover,
+.star.active {
+  color: var(--gold);
+}
+
+.star:hover { transform: scale(1.15); }
+
+.rating-label {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+/* ===== Submit Button ===== */
+.btn-submit {
+  width: 100%;
+  padding: 10px;
+  background: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover { background: var(--green-dark); }
+.btn-submit:active { transform: scale(0.98); }
+.btn-submit:disabled {
+  background: #93b8a9;
+  cursor: not-allowed;
+}
+
+.form-status {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 0.85rem;
+  min-height: 1.3em;
+}
+
+.form-status.success { color: #2e7d32; }
+.form-status.error   { color: #b3261e; } /* kept red so errors stay visibly distinct */
+
+/* ===== Reviews Wall ===== */
+.reviews-section { padding-bottom: 24px; }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.review-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-name {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.review-stars {
+  color: var(--gold);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.review-stars .empty { color: #d9d9d9; }
+
+.review-text {
+  font-size: 0.85rem;
+  color: #4a4a4a;
+}
+
+.review-date {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: auto;
+}
+
+.muted {
+  color: var(--muted);
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 14px 0;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  padding: 14px 20px;
+  background: var(--white);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 520px) {
+  .brand-logo { width: 300px; height: 300px; max-width: 90%; }
+  .hero h2 { font-size: 1.3rem; }
+  .card { padding: 16px; }
+}

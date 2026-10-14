@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAZZY COLLECTION — Customer Feedback</title>
+  <meta name="description" content="Share your experience with JAZZY COLLECTION. We value every review." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+
+    <!-- ===== Logo (standalone, no navbar) ===== -->
+    <div class="logo-wrap">
+      <img src="assets/logo.png" alt="JAZZY COLLECTION Logo" class="brand-logo" />
+    </div>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <h2>We'd love your feedback!</h2>
+      <p>How was your experience shopping with us? Your review helps us serve you better.</p>
+    </section>
+
+    <!-- ===== Feedback Form ===== -->
+    <section class="card form-card" id="feedback-form-card">
+      <h3>Leave a Review</h3>
+
+      <form id="feedbackForm" autocomplete="off">
+
+        <div class="field">
+          <label for="customerName">Your Name</label>
+          <input type="text" id="customerName" name="customerName" placeholder="e.g. Ayesha Khan" maxlength="80" required />
+        </div>
+
+        <div class="field">
+          <label>Rating</label>
+          <div class="star-rating" id="starRating" role="radiogroup" aria-label="Rating out of 5 stars">
+            <button type="button" class="star" data-value="1" role="radio" aria-checked="false" aria-label="1 star">&#9733;</button>
+            <button type="button" class="star" data-value="2" role="radio" aria-checked="false" aria-label="2 stars">&#9733;</button>
+            <button type="button" class="star" data-value="3" role="radio" aria-checked="false" aria-label="3 stars">&#9733;</button>
+            <button type="button" class="star" data-value="4" role="radio" aria-checked="false" aria-label="4 stars">&#9733;</button>
+            <button type="button" class="star" data-value="5" role="radio" aria-checked="false" aria-label="5 stars">&#9733;</button>
+            <span class="rating-label" id="ratingLabel">Select a rating</span>
+          </div>
+          <input type="hidden" id="ratingValue" name="rating" value="0" />
+        </div>
+
+        <div class="field">
+          <label for="feedbackText">Your Feedback</label>
+          <textarea id="feedbackText" name="feedback" rows="4" placeholder="Tell us what you liked or what we can improve..." maxlength="1000" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">Submit Feedback</button>
+
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- ===== Reviews Wall ===== -->
+    <section class="reviews-section">
+      <h3>What Our Customers Say</h3>
+      <div class="reviews-grid" id="reviewsGrid">
+        <p class="muted" id="reviewsLoading">Loading reviews…</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> JAZZY COLLECTION — Thank you for your support!</p>
+  </footer>
+
+  <!-- Supabase CDN + app -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
