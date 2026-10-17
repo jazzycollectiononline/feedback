@@ -240,6 +240,60 @@ textarea:focus {
   padding: 14px 0;
 }
 
+/* ===== Instagram Follow ===== */
+.instagram-follow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  text-align: center;
+  padding: 8px 0 30px;
+}
+
+.instagram-follow > p:first-child {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 11px 20px;
+  background: var(--green);
+  color: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-instagram:hover {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+  box-shadow: var(--shadow);
+}
+
+.btn-instagram:active { transform: scale(0.98); }
+
+.btn-instagram:focus-visible {
+  outline: 3px solid var(--green-light);
+  outline-offset: 3px;
+}
+
+.instagram-icon { width: 19px; height: 19px; flex: 0 0 auto; }
+
+.instagram-handle {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
 /* ===== Footer ===== */
 .site-footer {
   text-align: center;
